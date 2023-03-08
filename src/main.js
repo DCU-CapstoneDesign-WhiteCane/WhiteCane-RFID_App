@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, Menu } = require('electron')
 // include the Node.js 'path' module at the top of your file
 const path = require('path')
 
@@ -14,6 +14,11 @@ function createWindow () {
   })
   win.loadURL('http://localhost:3000')
 }
+
+const template = []; 
+const menu = Menu.buildFromTemplate(template); 
+Menu.setApplicationMenu(menu);
+
 app.whenReady().then(() => {
   createWindow()
 })
