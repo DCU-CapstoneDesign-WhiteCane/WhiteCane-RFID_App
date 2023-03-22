@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>WhiteCane Controller</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <div class="container">
@@ -12,8 +12,13 @@
         Tag
       </div>
       <div class="content">
-        시리얼 정보 출력
+        We are using Node.js <span id="node-version"></span>, Chromium <span id="chrome-version"></span>, Electron <span id="electron-version"></span>, and Serialport <span id="serialport-version"></span>
+        <div id="port-list"></div>
+        <div id="error"></div>
+        <div id="ports"></div>
+        
       </div>
+
       <nav class="main-menu">
         <div class="scrollbar" id="style-1">      
           <ul>  
@@ -31,9 +36,10 @@
               </li>
           </ul>
         </div>
-  
       </nav>
+
     </div>
+    <script src="../js/render.js"></script>
   </body>
 </html>
 
