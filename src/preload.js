@@ -4,8 +4,8 @@
     for (const versionType of['chrome', 'electron', 'node']) {
         document.getElementById(`${versionType}-version`).innerText = process.versions[versionType]
     }
-
-//    document.getElementById('serialport-version').innerText = require('serialport/package').version
+    const { SerialPort } = require('serialport')
+    document.getElementById('serialport-version').innerText = require('@serialport/package').version
 
     const Serialport = require('serialport')
     Serialport.list().then(ports => {

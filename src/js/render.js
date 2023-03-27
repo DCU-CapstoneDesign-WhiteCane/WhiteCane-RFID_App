@@ -1,4 +1,4 @@
-const { SerialPort } = require('serialport')
+  const { SerialPort } = require('serialport')
 const tableify = require('tableify')
 
 async function listSerialPorts() {
