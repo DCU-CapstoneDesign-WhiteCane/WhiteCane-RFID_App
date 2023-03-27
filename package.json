@@ -1,0 +1,30 @@
+{
+  "name": "whitecaneapp",
+  "version": "1.0.2",
+  "description": "RFID TAG Controller",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:serialport/electron-serialport.git"
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^17.0.0",
+    "electron-rebuild": "^3.2.9"
+  },
+  "dependencies": {
+    "serialport": "^10.5.0",
+    "tableify": "^1.1.1"
+  }
+}
