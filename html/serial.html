@@ -6,19 +6,24 @@
     <title>WhiteCane Controller</title>
     <link rel="stylesheet" href="../css/serial.css">
     <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css" />
-    <style>
-        table { border-collapse: collapse; }
-        table, th, td { border: 1px solid black; }
-    </style>
 </head>
 
 <body>
   <div id="container">
-    <h1>WhiteCane Tag Controller</h1><br><br/>
-    We are using Node.js <span id="node-version"></span>, Chromium <span id="chrome-version"></span>, Electron <span id="electron-version"></span>, and Serialport <span id="serialport-version"></span><br>
-    <div id="port-list"></div><br>
-    <div id="error"></div><br>
-    <div id="ports"></div><br>
+    <h1>Tag Controller</h1><br><br/>
+    <div class="control">
+      <div class="device">
+        <div class="connect">연결장치 :</div>
+        <select id="port-list"></select><br>
+        <div id="error"></div><br>
+      </div>
+      <div class="tag">
+        <div class="connect">태그정보 :</div>
+        <div class="connect">태그를 디바이스에 인식시켜주세요</div>
+      </div>
+      
+    </div>
+    
     <nav class="main-menu">
         <div class="scrollbar" id="style-1">      
             <ul>  
