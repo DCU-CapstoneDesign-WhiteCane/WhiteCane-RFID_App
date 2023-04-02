@@ -24,6 +24,7 @@
     "electron-rebuild": "^3.2.9"
   },
   "dependencies": {
+    "express": "^4.18.2",
     "serialport": "^10.5.0",
     "tableify": "^1.1.1"
   }
