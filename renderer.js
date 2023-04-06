@@ -23,6 +23,7 @@ async function listSerialPorts() {
     `  
   })
 
+//데이터 출력
 const { ReadlineParser } = require('@serialport/parser-readline')
 var pathNum = document.getElementById("list");
 
@@ -52,21 +53,36 @@ parser.on("data", (data) => {
 });
 
 // JSON 파싱 후 위치 데이터 추출
+
 const jsonParser = (json) => {
   let location;
   json = JSON.parse(json);
 
   try {
-      if (json.hasOwnProperty("location") == true) {
-          location = json.location;
-          console.log("장소 : ", location);
-          document.getElementById("location").innerHTML=`<input placeholder="${location}"></input><button>수정하기</button>`  
-      }
-  } catch (err) {
-      console.log("error", err.message);
-  }
+    if (json.hasOwnProperty("location") == true) {
+        location = json.location;
+        console.log("장소 : ", location);
+        document.getElementById("location").innerHTML=`<input id="inputValue" name="inputValue" value="${location}"placeholder="${location}"></input><button>수정하기</button>`  
+
+        const inputValueElement = document.getElementById("inputValue");
+        inputValueElement.addEventListener("input", () => {
+          let sendList = new Array();
+          console.log("location", inputValueElement.value);
+          sendList.push ({
+          mode: "w",
+          location: inputValueElement.value,
+        })
+
+        var jsonData = JSON.stringify(sendList);
+        console.log(jsonData); 
+        });
+        
+          }
+      } catch (err) {
+        console.log("error입니당", err.message);
+    }
 }; 
+
 
 }
 listSerialPorts() //바로 실행하는 함수 하나
-
