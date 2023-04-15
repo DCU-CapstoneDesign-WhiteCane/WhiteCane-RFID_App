@@ -15,12 +15,17 @@ async function listSerialPorts() {
     if (ports.length === 0) {
       document.getElementById('error').textContent = '연결된 장치가 없습니다.'
     }
+    else {
+      document.getElementById("device").innerHTML=`
+        <select id ="list">
+          ${ports.map(port => `<option value=${port.path}>${port.friendlyName}</option>`).join('')}
+        </select>
 
-    document.getElementById("list").innerHTML=`
-    <ul>
-      ${ports.map(port => `<option value=${port.path}>${port.friendlyName}</option>`).join('')}
-    </ul>
-    `  
+      `  
+      
+    }
+
+   
   })
 
   //장소 데이터 출력
@@ -90,7 +95,7 @@ async function listSerialPorts() {
 }; 
   //수정시 input 값 전송
   function send(jsonData) {
-    console.log("무언가 출력된다.")
+    console.log("장소 데이터 전송")
     const port = new SerialPort(
       {
         path: pathNum.options[pathNum.selectedIndex].value,

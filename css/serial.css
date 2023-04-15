@@ -40,8 +40,8 @@ li {
 .control {
     width: 500px;
     height: 150px;
-    padding: 0px;
-    margin: 0px;
+    padding: 30px;
+    margin: 0;
     border-radius: 25px;
     border: rgb(108, 108, 108) solid;
     display: flex;
@@ -55,7 +55,7 @@ li {
 
 }  
 .device {
-  background-color: rgba(0, 0, 255, 0);
+  background-color: rgba(167, 167, 216, 0);
   display: flex;
   width: 500px;
   height: 75px;
@@ -63,12 +63,42 @@ li {
   padding:0px;
   justify-content: space-between;
   align-items: center;
+  border-bottom: #8a8a8a;
+}
+button{
+  border: solid 5px;
+  margin: 30px;
+  background-color: #7ab371;
+  text-align: center;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 25px;
+  color: white;
+  box-shadow: 0;
+}
+select{
+  width: 200px;
+  height: 35px;
+  margin-top: 10px;
 }
 
+option{
+  width: 200px;
+  height: 35px;
+  
+}
 .connect {
   font-size: large;
   font-weight: 500;
   padding: 30px;
+  margin: 0px;
+}
+.connect_info {
+  font-size: large;
+  font-weight: 500;
+  padding: 30px;
+  margin-right: 150px;
 }
 .tag {
   background-color: rgba(136, 255, 0, 0);
