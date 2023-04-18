@@ -20,12 +20,8 @@ async function listSerialPorts() {
         <select id ="list">
           ${ports.map(port => `<option value=${port.path}>${port.friendlyName}</option>`).join('')}
         </select>
-
-      `  
-      
+      `      
     }
-
-   
   })
 
   //장소 데이터 출력
@@ -58,7 +54,6 @@ async function listSerialPorts() {
   });
 
   // JSON 파싱 후 위치 데이터 추출
-
   const jsonParser = (json) => {
   let location;
   json = JSON.parse(json);
@@ -73,50 +68,31 @@ async function listSerialPorts() {
         const inputValueElement = document.getElementById("inputValue");
 
         modifyBtnElement.addEventListener("click", () => {
-          let sendList = new Array();
-          console.log("location", inputValueElement.value);
-          sendList.push({
+
+          var sendData = {
             mode: "w",
             location: inputValueElement.value,
+          }
+
+          var jsonData = JSON.stringify(sendData);
+          console.log("보내는 데이터", jsonData); //클릭시 뜨는 콘솔
+          
+          port.write(jsonData, (err) => {
+              if (err) {
+                return console.log('Error on write:', err.message);
+              }
+              console.log('Data sent:', jsonData);
+          });
+          port.on('error', (err) => {
+            console.error('Error:', err);
           });
 
-          var jsonData = JSON.stringify(sendList);
-          console.log(jsonData); //클릭시 뜨는 콘솔
-          send(jsonData);
         });
 
-
-        
-          }
+        }
       } catch (err) {
         console.log("error입니당", err.message);
       }
-
 }; 
-  //수정시 input 값 전송
-  function send(jsonData) {
-    console.log("장소 데이터 전송")
-    const port = new SerialPort(
-      {
-        path: pathNum.options[pathNum.selectedIndex].value,
-        baudRate: 9600,
-        autoOpen: false,
-      });
-
-    port.on('open', () => {
-      console.log('port opened');
-      port.write(jsonData, (err) => {
-        if (err) {
-          return console.log('Error on write:', err.message);
-        }
-        console.log('Data sent:', jsonData);
-      });
-    });
-
-    port.on('error', (err) => {
-      console.error('Error:', err);
-    });
-  }
-
 }
 listSerialPorts() //바로 실행하는 함수 하나
