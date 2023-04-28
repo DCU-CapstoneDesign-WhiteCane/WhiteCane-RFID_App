@@ -65,6 +65,21 @@ li {
   align-items: center;
   border-bottom: #8a8a8a;
 }
+
+#modifyBtn {
+  padding: 0;
+  margin: 0;
+  border: solid 5px;
+  background-color: #7ab371;
+  text-align: center;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 25px;
+  color: white;
+  box-shadow: 0;
+}
+
 button{
   border: solid 5px;
   margin: 30px;
@@ -83,6 +98,16 @@ select{
   margin-top: 10px;
 }
 
+#location.connect_info {
+  margin: 0;
+  padding: 0;
+}
+
+#inputValue {
+  width: 195px;
+  height: 20px;
+  margin-right: 35px;
+}
 option{
   width: 200px;
   height: 35px;
@@ -100,6 +125,7 @@ option{
   padding: 30px;
   margin-right: 150px;
 }
+
 .tag {
   background-color: rgba(136, 255, 0, 0);
   display: flex;
@@ -107,7 +133,7 @@ option{
   height: 75px;
   margin:0px;
   padding:0px;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 .title {
@@ -147,7 +173,7 @@ option{
   width: 5px;
   background-color: #F7F7F7;
   }
-  
+
   #style-1::-webkit-scrollbar-thumb
   {
   border-radius: 10px;
