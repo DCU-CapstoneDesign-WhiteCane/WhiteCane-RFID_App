@@ -82,6 +82,7 @@ async function listSerialPorts() {
                 return console.log('Error on write:', err.message);
               }
               console.log('Data sent:', jsonData);
+              alert("수정되었습니다");
           });
           port.on('error', (err) => {
             console.error('Error:', err);

@@ -9,8 +9,8 @@ let mainWindow
 function createWindow() {
     // Create the browser window.
     mainWindow = new BrowserWindow({
-        width: 800,
-        height: 600,
+        width: 1200,
+        height: 900,
         backgroundColor: "#feffde", //배경화면 색깔
         webPreferences: {
             nodeIntegration: true, // to allow require
