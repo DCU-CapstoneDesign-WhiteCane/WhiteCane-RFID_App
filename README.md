@@ -1,41 +1,9 @@
-# electron-serialport
-An example of how to use serialport in an electron app
+# Application for controlling the RFID tag
+> 시각장애인들에게 장소를 알려주는 장소알림 기능에 사용되는 태그를 제어하는 데스크탑 애플리케이션 <br>
 
-**Clone and run for a quick way to see Electron and Serialport in action.**
+## UI Image
+### Main Page
+<img width="334" alt="main" src="https://github.com/DCU-CapstoneDesign-WhiteCane/WhiteCane-RFID_App/assets/75602377/25719414-b43a-4abc-a054-22e771e1c498">
 
-This is a minimal Electron application based on the [Quick Start Guide](http://electron.atom.io/docs/tutorial/quick-start) within the Electron documentation.
-
-**Use this app along with the [Electron API Demos](http://electron.atom.io/#get-started) app for API code examples to help you get started.**
-
-A basic Electron application needs just these files:
-
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
-
-You can learn more about each of these components within the [Quick Start Guide](http://electron.atom.io/docs/tutorial/quick-start).
-
-## To Use
-
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
-
-```bash
-# Clone this repository
-git clone https://github.com/serialport/electron-serialport.git
-# Go into the repository
-cd electron-serialport
-# Install dependencies
-npm install
-# Run the app
-npm start
-```
-
-Learn more about Electron and its API in the [documentation](http://electron.atom.io/docs/).
-
-## Other Example Apps
-
-For more example apps, see the
-[list of boilerplates](http://electron.atom.io/community/#boilerplates)
-created by the awesome electron community.
-
-#### License [CC0 1.0 (Public Domain)](LICENSE.md)
+### Page for control
+![tag](https://github.com/DCU-CapstoneDesign-WhiteCane/WhiteCane-RFID_App/assets/75602377/4196ba82-5430-4690-b38f-57a1686198ba)
